@@ -59,6 +59,10 @@ export default function RootLayout({
               home
             </Link>
             -
+            <Link href="/add">
+              add
+            </Link>
+            -
           </div>
           <div className="hidden md:block">
             {children}
