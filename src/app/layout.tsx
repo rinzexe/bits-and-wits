@@ -53,7 +53,7 @@ export default function RootLayout({
               This application is not supported on mobile devices. Please use a desktop browser.
             </p>
           </div>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             -
             <Link href="/">
               home
@@ -63,7 +63,7 @@ export default function RootLayout({
               add
             </Link>
             -
-          </div>
+          </div> */}
           <div className="hidden md:block">
             {children}
           </div>
