@@ -24,5 +24,5 @@ export default function Home() {
         <BitGrid float={float} setFloat={setFloat} />
       </div>
     </div>
-  ); 
+  );
 }

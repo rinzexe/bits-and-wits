@@ -1,6 +1,6 @@
 import { Float32 } from "@/float-type";
 
-export function BitGrid({ float, setFloat }: { float: Float32, setFloat: any }) {
+export function BitGrid({ float, setFloat }: { float: Float32, setFloat: (value: Float32) => void }) {
     const handleClick = (type: string, index: number) => {
         console.log(type === 'sign');
         if (type === 'sign') {
@@ -22,8 +22,8 @@ export function BitGrid({ float, setFloat }: { float: Float32, setFloat: any }) 
             <div className="text-blue-400" onClick={() => handleClick('sign', 0)}>
                 {float.sign[0]}
             </div>
-            {float.exponent.map((e: any, id: number) => <div key={id} className="text-green-400" onClick={() => handleClick('exponent', id)}>{e}</div>)}
-            {float.mantissa.map((e: any, id: number) => <div key={id} className="text-red-400" onClick={() => handleClick('mantissa', id)}>{e}</div>)}
+            {float.exponent.map((e, id: number) => <div key={id} className="text-green-400" onClick={() => handleClick('exponent', id)}>{e}</div>)}
+            {float.mantissa.map((e, id: number) => <div key={id} className="text-red-400" onClick={() => handleClick('mantissa', id)}>{e}</div>)}
         </div>
     )
 }
